@@ -9,7 +9,7 @@ export interface Genre {
   image_background: string;
 }
 
-const apiClient = new APIClient<Genre>("/genre");
+const apiClient = new APIClient<Genre>("/genres");
 
 // const useGenres = () => ({ data: genre, isLoading: false, error: null });
 // const useGenres = () => useData<Genre>('/genres');
@@ -22,7 +22,7 @@ const useGenres = () =>
     queryKey: ["genres"],
     queryFn: apiClient.getAll,
     staleTime: 24 * 60 * 60 * 1000, //24hrs
-    initialData: { count: genre.length, results: genre },
+    // initialData: { count: genre.length, results: genre, next: (string | null) },
   });
 
 export default useGenres;
