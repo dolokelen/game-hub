@@ -16,8 +16,6 @@ const GenreList = () => {
   const selectedGenreId = useGameQueryStore((s) => s.gameQuery.genreId);
   const setSelectedGenreId = useGameQueryStore((s) => s.setGenreId);
 
-  console.log("Genres:", data);
-
   if (isLoading) return <Spinner />;
   if (error) return null;
 
