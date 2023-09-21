@@ -17,7 +17,7 @@ const ExpandableText = ({ children }: Props) => {
     : children;
   return (
     <Text>
-      {summary}{" "}
+      {summary}
       <Button
         size="xs"
         marginLeft={1}
